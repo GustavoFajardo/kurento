@@ -25,13 +25,15 @@ body {
     box-shadow: 0px 0px 20px 2px #d1d1d1;
     overflow: hidden;
     height: 720px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .atencion__grid__videos {
     position: relative;
-    height: 100%;
-    padding:10px;
+    height: 640px;
+    padding:25px;
 }
-
 #videoOutput {
 
     width: 100%;
@@ -51,13 +53,13 @@ body {
 
 #videoBig{
     width: 100%;
-    height:700px;
+    height:100%;
 }
 
 #videoSmall {
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: 15px;
+    right: -20px;
     width: 250px;
     height: 150px;
     background-color: white;
@@ -68,54 +70,18 @@ div.dragged {
     z-index: 10 !important;
 }
 
-.conversacion {
-    content: "";
-    width: 80%;
-    height: 300px;
-    margin: 0 auto;
-    padding: 1px;
-    /* overflow: hidden; */
-}
-.conversacion input {
-    padding: 20px;
-}
-.historial {
-    height: 250px;
-    border-radius: 5px;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-
-}
-
 .resize--button a{
     width:200px;
     padding: 10px;
     font-size: 16px;
 }
-.prueba {
-    display: flex;
-    justify-content: center;
-}
-.prueba a{
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-}
-.prueba a span{
-    margin-left: 10px;
-}
-.label-form{
-    font-size: 16px;
-    font-weight: 400;
-}
+
 .controles{
-    position:absolute;
     background-color:transparent;
-    bottom:10%;
-    left:33%;
     display:flex;
     justify-content: center;
     gap:20px;
-    max-width: 500px;
+    margin-bottom:50px
 }
 
 @media (max-width:414px){
@@ -130,12 +96,15 @@ div.dragged {
     }
     .controles{
         width: 200px;
-        bottom:10%;
-        left:27%;
-        margin-bottom: 5px;
+       position:absolute;
+       bottom:10px;
+       left:23%;
+       margin:0;
     }
     .atencion__grid{
         padding: 0px;
+        position:relative;
+       
     }
     #videoSmall{
         width: 125px;
@@ -144,7 +113,7 @@ div.dragged {
         right:5px;
     }
     #videoBig{
-       height:600px;
+        height:600px;
     }
 }
 
