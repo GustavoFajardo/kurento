@@ -6,14 +6,14 @@ body {
 /* estilos personales */
 
 .main{
-    width: 100vw;
+    width: 100%;
 
 }
 
 .contenedor {
     display: grid;
     min-height: 100vh;
-   
+
 }
 
 
@@ -24,30 +24,34 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 20px 2px #d1d1d1;
     overflow: hidden;
+    height: 720px;
 }
 .atencion__grid__videos {
     position: relative;
+    height: 100%;
+    padding:10px;
 }
 
 #videoOutput {
-    height: 90vh;
+
     width: 100%;
     border: 1px solid #d3d3d3;
     border-radius: 10px;
     object-fit:contain;
-    
+    height: 90%;
+
 }
 #videoInput {
     border-radius: 10px;
     border: 1px solid #bababa;
     width: 100%;
     height: 100%;
- 
+
 }
 
 #videoBig{
     width: 100%;
-    height: 100%;
+    height:700px;
 }
 
 #videoSmall {
@@ -83,7 +87,7 @@ div.dragged {
 }
 
 .resize--button a{
-   width:200px;
+    width:200px;
     padding: 10px;
     font-size: 16px;
 }
@@ -107,19 +111,46 @@ div.dragged {
     position:absolute;
     background-color:transparent;
     bottom:10%;
-    left:0;
+    left:33%;
     display:flex;
     justify-content: center;
     gap:20px;
-    width: 500px;
+    max-width: 500px;
 }
-@media(max-width:300px){
-    
+
+@media (max-width:414px){
+    .controles{
+        flex-direction: column;
+    }
+    .container{
+        margin:0 !important;
+    }
+    .resp{
+        flex: none;
+    }
+    .controles{
+        width: 200px;
+        bottom:10%;
+        left:27%;
+        margin-bottom: 5px;
+    }
+    .atencion__grid{
+        padding: 0px;
+    }
+    #videoSmall{
+        width: 125px;
+        height: 75px;
+        top:5px;
+        right:5px;
+    }
+    #videoBig{
+       height:600px;
+    }
 }
 
 .democonsole{
-   position: absolute;
-   max-width: 250px;
-   top:0;
-   left:0;
+    position: absolute;
+    max-width: 250px;
+    top:0;
+    left:0;
 }
